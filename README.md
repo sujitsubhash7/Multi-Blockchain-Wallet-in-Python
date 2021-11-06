@@ -30,3 +30,20 @@ The output should match what you see below:
       +------+-------------------------------------+
       ```
 
+Create a file called `wallet.py` -- this will be your universal wallet script. File available here [wallet](wallet/wallet.py) as a starting point.
+
+In a separate file, `constants.py`, set the following constants:
+  - `BTC = 'btc'`
+  - `ETH = 'eth'`
+  - `BTCTEST = 'btc-test'`
+
+In `wallet.py`, import all constants: `from constants import *`. Then Generate a **new** 12 word mnemonic using `hd-wallet-derive` or by using [this tool](https://iancoleman.io/bip39/). Set this mnemonic as an environment variable by storing it a an `.env` file and importing it into your `wallet.py`.
+
+Create a function called derive_wallets
+![](images/derive_wallets.JPG)
+
+
+## Send Transactions
+
+## Transaction Confirmation
+![](images/btc_confirmation.JPG)
