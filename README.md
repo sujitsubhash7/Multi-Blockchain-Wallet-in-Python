@@ -39,9 +39,23 @@ In a separate file, `constants.py`, set the following constants:
 
 In `wallet.py`, import all constants: `from constants import *`. Then Generate a **new** 12 word mnemonic using `hd-wallet-derive` or by using [this tool](https://iancoleman.io/bip39/). Set this mnemonic as an environment variable by storing it a an `.env` file and importing it into your `wallet.py`.
 
-Create a function called derive_wallets
+Create a function called derive_wallets and create a dictionary object called coins that uses the derive_wallets function to derive ETH and BTCTEST wallets
+
 ![](images/derive_wallets.JPG)
 
+Use bit and web3.py to leverage the keys stored in the coins object by creating three more functions:
+
+priv_key_to_account that will convert the privkey string in a child key to an account object that bit or web3.py can use to transact.
+
+![](images/priv_key_to_account.JPG)
+
+create_tx that will create the raw, unsigned transaction that contains all metadata needed to transact.
+
+![](images/create_tx.JPG)
+
+send_tx that will call create_tx, sign the transaction, then send it to the designated network.
+
+![](images/send_tx.JPG)
 
 ## Send Transactions
 
