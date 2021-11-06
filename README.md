@@ -58,6 +58,9 @@ send_tx that will call create_tx, sign the transaction, then send it to the desi
 ![](images/send_tx.JPG)
 
 ## Send Transactions
+Open a Python shell and run the command from wallet import *. This will allow you to access the functions in wallet.py interactively.
+
+![](btc_transaction)
 
 ## Transaction Confirmation
 ![](images/btc_confirmation.JPG)
